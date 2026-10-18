@@ -1,56 +1,56 @@
-\# GlobalTrade Supply Chain Management System
+# GlobalTrade Supply Chain Management System
 
 
 
-A Jakarta EE enterprise application for managing global supply-chain operations, developed for the BCD II assignment. The system supports vendor, inventory, and shipment management while demonstrating core Enterprise JavaBeans (EJB) concepts including timer services, transaction management, interceptors, declarative security, exception handling, and automated testing.
+A Jakarta EE enterprise application for managing global supply-chain operations. The system supports vendor, inventory, and shipment management while demonstrating core Enterprise JavaBeans (EJB) concepts including timer services, transaction management, interceptors, declarative security, exception handling, and automated testing.
 
 
 
-\## Features
+## Features
 
 
 
-\- Vendor management with performance tracking and status control
+- Vendor management with performance tracking and status control
 
-\- Inventory management with stock-level and reorder-threshold monitoring
+- Inventory management with stock-level and reorder-threshold monitoring
 
-\- Shipment tracking, customs-deadline handling, and delivery-status updates
+- Shipment tracking, customs-deadline handling, and delivery-status updates
 
-\- Programmatic and declarative EJB timer services
+- Programmatic and declarative EJB timer services
 
-\- Container-Managed Transactions (CMT) and a Business-Managed Transaction (BMT) example
+- Container-Managed Transactions (CMT) and a Business-Managed Transaction (BMT) example
 
-\- Audit logging and performance-monitoring interceptors
+- Audit logging and performance-monitoring interceptors
 
-\- Role-based access control using WildFly Elytron and HTTP Basic authentication
+- Role-based access control using WildFly Elytron and HTTP Basic authentication
 
-\- Custom application exceptions for invalid states and missing records
+- Custom application exceptions for invalid states and missing records
 
-\- Automated testing using JUnit 5 and Arquillian
-
-
-
-\## Technology Stack
+- Automated testing using JUnit 5 and Arquillian
 
 
 
-\- Java 17
-
-\- Jakarta EE 10
-
-\- Enterprise JavaBeans (EJB)
-
-\- WildFly 31
-
-\- Maven multi-module project
-
-\- MySQL
-
-\- JUnit 5 and Arquillian
+## Technology Stack
 
 
 
-\## Project Structure
+- Java 17
+
+- Jakarta EE 10
+
+- Enterprise JavaBeans (EJB)
+
+- WildFly 31
+
+- Maven multi-module project
+
+- MySQL
+
+- JUnit 5 and Arquillian
+
+
+
+## Project Structure
 
 
 
@@ -70,7 +70,7 @@ supply-chain-parent/
 
 
 
-\## Requirements
+## Requirements
 
 
 
@@ -78,43 +78,37 @@ Before running the project, ensure that you have:
 
 
 
-\- JDK 17
+- JDK 17
 
-\- WildFly 31 or a compatible Jakarta EE application server
+- WildFly 31 or a compatible Jakarta EE application server
 
-\- MySQL Server
+- MySQL Server
 
-\- Maven or an IDE with Maven support
+- Maven or an IDE with Maven support
 
-\- A MySQL database named `globaltrade\_scm`
+- A MySQL database named `globaltrade\_scm`
 
-\- A configured WildFly datasource named `java:/SupplyChainDS`
-
-
-
-\## Build and Deployment
+- A configured WildFly datasource named `java:/SupplyChainDS`
 
 
 
-1\. Configure the MySQL database and WildFly datasource.
-
-2\. Build the Maven project from the parent directory.
-
-3\. Deploy the generated EAR file to WildFly.
-
-4\. Access the application test endpoints through:
+## Build and Deployment
 
 
 
-```text
+1. Configure the MySQL database and WildFly datasource.
 
-http://localhost:8080/supplychain/
+2. Build the Maven project from the parent directory.
 
-```
+3. Deploy the generated EAR file to WildFly.
+
+4. Access the application test endpoints.
 
 
 
-\## Security
+
+
+## Security
 
 
 
@@ -122,19 +116,19 @@ The application uses WildFly Elytron for authentication and role-based authoriza
 
 
 
-\- `SYSTEM\_ADMIN`
+- `SYSTEM_ADMIN`
 
-\- `LOGISTICS\_COORDINATOR`
+- `LOGISTICS_COORDINATOR`
 
-\- `WAREHOUSE\_MANAGER`
+- `WAREHOUSE_MANAGER`
 
-\- `CUSTOMS\_AGENT`
+- `CUSTOMS_AGENT`
 
-\- `VENDOR\_REP`
+- `VENDOR_REP`
 
 
 
-\## Testing
+## Testing
 
 
 
@@ -142,9 +136,9 @@ The project includes automated tests with JUnit 5 and Arquillian. Tests cover de
 
 
 
-\## Project Showcase
+## Project Showcase
 
 
 
-Check out the project demonstration on LinkedIn:https://lnkd.in/p/gvDRdx2j
+Check out the project demonstration on LinkedIn: (https://lnkd.in/p/gvDRdx2j)
 
