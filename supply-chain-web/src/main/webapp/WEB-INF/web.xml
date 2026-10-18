@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+             https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <!-- Require login for anything under /admin/* -->
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Admin Only</web-resource-name>
+            <url-pattern>/admin/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>SYSTEM_ADMIN</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <!-- Require login for the test servlets, allow multiple operational roles -->
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Operational Access</web-resource-name>
+            <url-pattern>/vendor-test</url-pattern>
+            <url-pattern>/shipment-test</url-pattern>
+            <url-pattern>/inventory-test</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>SYSTEM_ADMIN</role-name>
+            <role-name>LOGISTICS_COORDINATOR</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <!-- Declare all roles used above -->
+    <security-role>
+        <role-name>SYSTEM_ADMIN</role-name>
+    </security-role>
+    <security-role>
+        <role-name>LOGISTICS_COORDINATOR</role-name>
+    </security-role>
+    <security-role>
+        <role-name>CUSTOMS_AGENT</role-name>
+    </security-role>
+    <security-role>
+        <role-name>WAREHOUSE_MANAGER</role-name>
+    </security-role>
+    <security-role>
+        <role-name>VENDOR_REP</role-name>
+    </security-role>
+
+    <!-- Use HTTP BASIC authentication -->
+    <login-config>
+        <auth-method>BASIC</auth-method>
+        <realm-name>SupplyChainRealm</realm-name>
+    </login-config>
+
+</web-app>
